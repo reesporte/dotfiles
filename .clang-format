@@ -1,0 +1,4 @@
+# i like google's style except i like a bit more space and No Column Limits Ever
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 0
