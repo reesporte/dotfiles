@@ -30,9 +30,14 @@ autocmd BufWritePost *.go redraw!
 autocmd BufWritePost *.c silent! !clang-format -i <afile>
 autocmd BufWritePost *.c redraw!
 
+" auto-format python files on save with yapf
+autocmd BufWritePost *.py silent! !yapf -i <afile>
+autocmd BufWritePost *.py redraw!
+
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
 
 " set tabs to four spaces
 set tabstop=4
+set expandtab
 
