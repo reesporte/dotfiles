@@ -18,6 +18,9 @@ alias python3='python3.9'
 alias pip='pip3.9'
 alias pip3='pip3.9'
 
+# ls -alh
+alias la=ls -alh
+
 # secrets 
 [ -f .secret_zsh_aliases ] && source .secret_zsh_aliases
 
