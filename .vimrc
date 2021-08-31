@@ -2,7 +2,7 @@
 syntax enable
 
 " set the colorscheme
-colorscheme desert
+colorscheme slate
 
 " turn on line numbers
 set number
@@ -31,7 +31,7 @@ autocmd BufWritePost *.c silent! !clang-format -i <afile>
 autocmd BufWritePost *.c redraw!
 
 " auto-format python files on save with yapf
-autocmd BufWritePost *.py silent! !yapf -i <afile>
+autocmd BufWritePost *.py silent! !yapf -i --style='{based_on_style: google, column_limit: 0}' <afile>
 autocmd BufWritePost *.py redraw!
 
 " don't make mistakes lol jk i just hate those undofiles
