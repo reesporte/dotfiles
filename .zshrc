@@ -32,7 +32,7 @@ export PATH=$PATH:~/homebrew/bin:~/go/bin
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 # actual prompt customization
-export PROMPT='%F{green}$(b)%# %F{cyan}%*%f %F{green}%~%f 🐠 '
+export PROMPT='%F{35}$(b)%# %F{33}%~%f 🐠 '
 # enable colors
 export CLICOLOR=1
 # make ls look pretty
