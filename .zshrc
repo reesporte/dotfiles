@@ -17,6 +17,8 @@ alias python='python3.9'
 alias python3='python3.9'
 alias pip='pip3.9'
 alias pip3='pip3.9'
+# execute lisp 
+alias elisp='sbcl --script $1'
 
 # ls -alh
 alias la=ls -alh
