@@ -30,8 +30,8 @@ autocmd BufWritePost *.go redraw!
 autocmd BufWritePost *.c silent! !clang-format -i <afile>
 autocmd BufWritePost *.c redraw!
 
-" auto-format python files on save with yapf
-autocmd BufWritePost *.py silent! !yapf -i --style='{based_on_style: google, column_limit: 0}' <afile>
+" auto-format python files on save with black
+autocmd BufWritePost *.py silent! !black --line-length 100 <afile>
 autocmd BufWritePost *.py redraw!
 
 " don't make mistakes lol jk i just hate those undofiles
