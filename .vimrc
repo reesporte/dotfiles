@@ -34,6 +34,11 @@ autocmd BufWritePost *.c redraw!
 autocmd BufWritePost *.py silent! !black --line-length 100 <afile>
 autocmd BufWritePost *.py redraw!
 
+" auto-format html files on save with html-compile
+autocmd BufWritePost *.html silent! !html-compile --prettify <afile> --out .
+autocmd BufWritePost *.html redraw!
+
+
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
 
