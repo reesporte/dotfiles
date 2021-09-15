@@ -21,7 +21,7 @@ alias pip3='pip3.9'
 alias elisp='sbcl --script $1'
 
 # ls -alh
-alias la=ls -alh
+alias la='ls -alh'
 
 # secrets 
 [ -f .secret_zsh_aliases ] && source .secret_zsh_aliases
