@@ -30,7 +30,7 @@ alias la='ls -alh'
 # EXPORTS
 # ------------------------------
 # add homebrew and gobin to the path
-export PATH=$PATH:~/homebrew/bin:~/go/bin
+export PATH=$PATH:$HOME/homebrew/bin:$HOME/go/bin
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 # actual prompt customization
