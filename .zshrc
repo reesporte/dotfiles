@@ -39,4 +39,6 @@ export PROMPT='%F{35}$(b)%# %F{33}%~%f 🐠 '
 export CLICOLOR=1
 # make ls look pretty
 export LSCOLORS=GxFxCxDxBxegedabagaced
+# set my notes directory for the notes cli
+export NOTES_HOME=~/notes
 
