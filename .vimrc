@@ -50,3 +50,6 @@ set expandtab
 " except for makefiles
 autocmd FileType make setlocal noexpandtab
 
+" remember previous indent when creating new lines
+set smartindent
+
