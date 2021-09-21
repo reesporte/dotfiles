@@ -47,3 +47,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" except for makefiles
+autocmd FileType make setlocal noexpandtab
+
