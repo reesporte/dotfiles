@@ -53,3 +53,11 @@ autocmd FileType make setlocal noexpandtab
 " remember previous indent when creating new lines
 set smartindent
 
+" linting things
+" shoutout to this gist: https://gist.github.com/romainl/ce55ce6fdc1659c5fbc0f4224fd6ad29
+augroup Linting
+    autocmd!
+    autocmd FileType go setlocal makeprg=staticcheck\ .
+    autocmd BufWritePost *.go silent make! | silent redraw!
+    autocmd QuickFixCmdPost [^l]* cwindow
+augroup END
