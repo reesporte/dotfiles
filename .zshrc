@@ -13,6 +13,7 @@ setopt PROMPT_SUBST
 # get battery life
 alias b='pmset -g batt | grep % | cut -d" " -f3 | cut -f2'
 # use python3.9 by default
+alias py='python3.9'
 alias python='python3.9'
 alias python3='python3.9'
 alias pip='pip3.9'
