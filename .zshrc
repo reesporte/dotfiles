@@ -24,6 +24,8 @@ alias elisp='sbcl --script $1'
 alias la='ls -alh'
 # vim 
 alias v='vim'
+# clear 
+alias cls='clear'
 # secrets 
 [ -f .secret_zsh_aliases ] && source .secret_zsh_aliases
 
