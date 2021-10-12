@@ -20,8 +20,9 @@ alias pip='pip3.9'
 alias pip3='pip3.9'
 # execute lisp 
 alias elisp='sbcl --script $1'
-# ls -alh
+# ls
 alias la='ls -alh'
+alias l='ls'
 # vim 
 alias v='vim'
 # clear 
