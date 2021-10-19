@@ -1,0 +1,10 @@
+*
+!.gitignore
+!.vimrc
+!.zshrc
+!.clang-format
+!.tmux.conf
+
+!.vim/*
+.vim/.netrwhist
+
