@@ -46,3 +46,4 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
 
+export PATH="/Users/reese/homebrew/opt/libpq/bin:$PATH"
