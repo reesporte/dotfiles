@@ -7,6 +7,10 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # enable prompt parameter expansions
 setopt PROMPT_SUBST
 
+# terraform autocomplete
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C $HOME/homebrew/bin/terraform terraform
+
 # ------------------------------
 # ALIASES
 # ------------------------------
@@ -34,7 +38,7 @@ alias cls='clear'
 # EXPORTS
 # ------------------------------
 # add homebrew and gobin to the path
-export PATH=$PATH:$HOME/homebrew/bin:$HOME/go/bin
+export PATH=$HOME/homebrew/opt/libpq/bin:$HOME/homebrew/bin:$HOME/go/bin:$PATH
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 # actual prompt customization
@@ -46,4 +50,3 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
 
-export PATH="/Users/reese/homebrew/opt/libpq/bin:$PATH"
