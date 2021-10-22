@@ -38,6 +38,10 @@ autocmd BufWritePost *.py redraw!
 autocmd BufWritePost *.html silent! !html-compile --prettify <afile> --out .
 autocmd BufWritePost *.html redraw!
 
+" auto-format terraform files on save with terraform fmt
+autocmd BufWritePost *.tf silent! !terraform fmt <afile>
+autocmd BufWritePost *.tf redraw!
+
 
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
@@ -55,7 +59,13 @@ autocmd FileType make setlocal noexpandtab
 " shoutout to this gist: https://gist.github.com/romainl/ce55ce6fdc1659c5fbc0f4224fd6ad29
 augroup Linting
     autocmd!
-    autocmd FileType go setlocal makeprg=staticcheck\ .
+    autocmd FileType go setlocal makeprg=go\ vet\ <afile>
     autocmd BufWritePost *.go silent make! | silent redraw!
     autocmd QuickFixCmdPost [^l]* cwindow
 augroup END
+
+" custom syntax files 
+" for terraform / hcl files
+au BufRead,BufNewFile *.tf set filetype=hcl
+au BufRead,BufNewFile *.hcl set filetype=hcl
+
