@@ -4,7 +4,7 @@
 !.zshrc
 !.clang-format
 !.tmux.conf
-
+!.ctags
 !.vim/syntax/*
 .vim/.netrwhist
 
