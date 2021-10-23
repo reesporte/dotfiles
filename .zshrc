@@ -37,8 +37,8 @@ alias cls='clear'
 # ------------------------------
 # EXPORTS
 # ------------------------------
-# add homebrew and gobin to the path
-export PATH=$HOME/homebrew/opt/libpq/bin:$HOME/homebrew/bin:$HOME/go/bin:$PATH
+# add rust and psql and homebrew and gobin to the path
+export PATH=$HOME/.cargo/bin:$HOME/homebrew/opt/libpq/bin:$HOME/homebrew/bin:$HOME/go/bin:$PATH
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 # actual prompt customization
