@@ -42,6 +42,11 @@ autocmd BufWritePost *.html redraw!
 autocmd BufWritePost *.tf silent! !terraform fmt <afile>
 autocmd BufWritePost *.tf redraw!
 
+" auto-format rust files on save with rustfmt
+autocmd BufWritePost *.rs silent! !rustfmt <afile>
+autocmd BufWritePost *.rs redraw!
+
+
 
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
