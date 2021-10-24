@@ -74,3 +74,5 @@ augroup END
 au BufRead,BufNewFile *.tf set filetype=hcl
 au BufRead,BufNewFile *.hcl set filetype=hcl
 
+" set ctags file name
+set tags=./tags,./tags.dot;
