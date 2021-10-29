@@ -46,6 +46,9 @@ autocmd BufWritePost *.tf redraw!
 autocmd BufWritePost *.rs silent! !rustfmt <afile>
 autocmd BufWritePost *.rs redraw!
 
+" auto-format js/typescript files on save with prettier
+autocmd BufWritePost *.ts,*.tsx,*.js silent! !prettier --write <afile>
+autocmd BufWritePost *.ts,*.tsx,*.js redraw!
 
 
 " don't make mistakes lol jk i just hate those undofiles
@@ -76,3 +79,6 @@ au BufRead,BufNewFile *.hcl set filetype=hcl
 
 " set ctags file name
 set tags=./tags,./tags.o,./tags.dot;
+
+" set regex engine to use NFA 
+set re=2
