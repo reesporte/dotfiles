@@ -5,6 +5,6 @@
 !.clang-format
 !.tmux.conf
 !.ctags
-!.vim/syntax/*
+!.vim/*
 .vim/.netrwhist
 

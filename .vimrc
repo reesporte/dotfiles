@@ -2,7 +2,7 @@
 syntax enable
 
 " set the colorscheme
-colorscheme slate
+colorscheme shades-of-pastel
 
 " turn on line numbers
 set number
