@@ -62,6 +62,8 @@ set expandtab
 " except for makefiles
 autocmd FileType make setlocal noexpandtab
 
+" fuzzy file finding but recursive
+set path+=.,**
 
 " linting things
 " shoutout to this gist: https://gist.github.com/romainl/ce55ce6fdc1659c5fbc0f4224fd6ad29
