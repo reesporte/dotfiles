@@ -65,12 +65,12 @@ autocmd FileType make setlocal noexpandtab
 
 " linting things
 " shoutout to this gist: https://gist.github.com/romainl/ce55ce6fdc1659c5fbc0f4224fd6ad29
-augroup Linting
-    autocmd!
-    autocmd FileType go setlocal makeprg=go\ vet\ <afile>
-    autocmd BufWritePost *.go silent make! | silent redraw!
-    autocmd QuickFixCmdPost [^l]* cwindow
-augroup END
+" augroup Linting
+"    autocmd!
+"    autocmd FileType go setlocal makeprg=go\ vet\ <afile>
+"    autocmd BufWritePost *.go silent make! | silent redraw!
+"    autocmd QuickFixCmdPost [^l]* cwindow
+"augroup END
 
 " custom syntax files 
 " for terraform / hcl files
