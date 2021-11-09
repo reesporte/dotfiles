@@ -31,6 +31,10 @@ alias l='ls'
 alias v='vim'
 # clear 
 alias cls='clear'
+# ripgrep no ignore
+alias g='rg --no-ignore $1'
+
+
 # secrets 
 [ -f .secret_zsh_aliases ] && source .secret_zsh_aliases
 
