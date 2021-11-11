@@ -84,3 +84,7 @@ set tags=./tags,./tags.o,./tags.dot;
 
 " set regex engine to use NFA 
 set re=2
+
+" make file-browsing more enjoyable
+let g:netrw_banner=0 " no banner
+let g:netrw_liststyle=3 " tree view
