@@ -3,7 +3,6 @@
 # ------------------------------
 # enable tab completion
 autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # enable prompt parameter expansions
 setopt PROMPT_SUBST
 
