@@ -81,7 +81,7 @@ hi IncSearch      ctermfg=234 ctermbg=223   cterm=NONE   guifg=#191919 guibg=#FF
 hi Boolean        ctermfg=167  ctermbg=NONE cterm=bold   guifg=#DE5550 guibg=NONE    gui=bold
 
 hi Character      ctermfg=183  ctermbg=NONE cterm=NONE   guifg=#B99EE3 guibg=NONE    gui=NONE
-hi Comment        ctermfg=245  ctermbg=NONE cterm=italic guifg=#7F8182 guibg=NONE    gui=italic
+hi Comment        ctermfg=245  ctermbg=NONE cterm=NONE guifg=#7F8182 guibg=NONE    gui=NONE
 hi Conditional    ctermfg=116  ctermbg=NONE cterm=bold   guifg=#93C7C4 guibg=NONE    gui=bold
 hi Constant       ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#D48645 guibg=NONE    gui=NONE
 
@@ -119,7 +119,7 @@ hi Statement      ctermfg=116  ctermbg=NONE cterm=bold   guifg=#8BC7C4 guibg=NON
 hi StorageClass   ctermfg=204  ctermbg=NONE cterm=NONE   guifg=#F54985 guibg=NONE    gui=NONE
 hi String         ctermfg=186  ctermbg=NONE cterm=NONE   guifg=#C7C283 guibg=NONE    gui=NONE
 hi Structure      ctermfg=74   ctermbg=NONE cterm=NONE   guifg=#65A1F0 guibg=NONE    gui=NONE
-hi SpecialComment ctermfg=245  ctermbg=NONE cterm=italic guifg=#7F8182 guibg=NONE    gui=italic
+hi SpecialComment ctermfg=245  ctermbg=NONE cterm=NONE guifg=#7F8182 guibg=NONE    gui=NONE
 
 hi Tag            ctermfg=110  ctermbg=NONE cterm=NONE   guifg=#7FA8D4 guibg=NONE    gui=NONE
 hi Title          ctermfg=167  ctermbg=NONE cterm=bold   guifg=#E06767 guibg=NONE    gui=bold
