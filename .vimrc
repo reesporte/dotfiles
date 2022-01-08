@@ -31,7 +31,7 @@ autocmd BufWritePost *.c silent! !clang-format -i <afile>
 autocmd BufWritePost *.c redraw!
 
 " auto-format python files on save with black
-autocmd BufWritePost *.py silent! !black --line-length 100 <afile>
+autocmd BufWritePost *.py silent! !black <afile>
 autocmd BufWritePost *.py redraw!
 
 " auto-format html files on save with html-compile
