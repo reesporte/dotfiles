@@ -2,7 +2,7 @@
 syntax enable
 
 " set the colorscheme
-colorscheme shades-of-pastel
+colorscheme onehalfdark
 
 " turn on line numbers
 set number
