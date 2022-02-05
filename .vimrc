@@ -38,6 +38,10 @@ autocmd BufWritePost *.py redraw!
 autocmd BufWritePost *.html silent! !html-compile --prettify <afile> --out .
 autocmd BufWritePost *.html redraw!
 
+" auto-format css files on save with prettier
+autocmd BufWritePost *.css silent! !prettier -w <afile>
+autocmd BufWritePost *.css redraw!
+
 " auto-format terraform files on save with terraform fmt
 autocmd BufWritePost *.tf silent! !terraform fmt <afile>
 autocmd BufWritePost *.tf redraw!
@@ -88,3 +92,9 @@ set re=2
 " make file-browsing more enjoyable
 let g:netrw_banner=0 " no banner
 let g:netrw_liststyle=3 " tree view
+
+" wrap text at 84 chars
+set textwidth=84
+
+" turn off that dagnab bell
+set noeb vb t_vb=
