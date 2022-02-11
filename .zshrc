@@ -10,6 +10,8 @@ setopt PROMPT_SUBST
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/homebrew/bin/terraform terraform
 
+# turn off damn beeps
+unsetopt BEEP
 # ------------------------------
 # ALIASES
 # ------------------------------
@@ -52,4 +54,3 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
-
