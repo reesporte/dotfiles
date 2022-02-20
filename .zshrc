@@ -37,7 +37,7 @@ alias g='rg --no-ignore $1'
 
 
 # secrets 
-[ -f .secret_zsh_aliases ] && source .secret_zsh_aliases
+[ -f ~/.secret_zsh_aliases ] && source ~/.secret_zsh_aliases
 
 # ------------------------------
 # EXPORTS
