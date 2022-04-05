@@ -1,5 +1,6 @@
 *
 !.gitignore
+!.gitconfig
 !.vimrc
 !.zshrc
 !.clang-format
