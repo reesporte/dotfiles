@@ -9,6 +9,8 @@
 [alias]
 	puhs = push
 	puh = push
-	branch = brancg
+	brancg = branch
+	dif = diff
+	cehckout = checkout
 [pull]
 	rebase = true
