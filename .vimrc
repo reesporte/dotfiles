@@ -27,8 +27,8 @@ autocmd BufWritePost *.go silent! !goimports -w <afile>
 autocmd BufWritePost *.go redraw!
 
 " auto-format c files on save with clang-format
-autocmd BufWritePost *.c silent! !clang-format -i <afile>
-autocmd BufWritePost *.c redraw!
+autocmd BufWritePost *.c,*.cpp silent! !clang-format -i <afile>
+autocmd BufWritePost *.c,*.cpp redraw!
 
 " auto-format python files on save with black
 autocmd BufWritePost *.py silent! !black <afile>
