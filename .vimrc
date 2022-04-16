@@ -54,6 +54,9 @@ autocmd BufWritePost *.rs redraw!
 autocmd BufWritePost *.ts,*.tsx,*.js silent! !prettier --write <afile>
 autocmd BufWritePost *.ts,*.tsx,*.js redraw!
 
+" auto-format zig files on save with zig fmt
+autocmd BufWritePost *.zig silent! !zig fmt <afile>
+autocmd BufWritePost *.zig redraw!
 
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
