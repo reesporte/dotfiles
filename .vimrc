@@ -68,6 +68,9 @@ autocmd FileType make setlocal noexpandtab
 
 " fuzzy file finding but recursive
 set path+=.,**
+" stack overflow says this works better
+nnoremap <C-p> :find ./**/*
+
 
 " linting things
 " shoutout to this gist: https://gist.github.com/romainl/ce55ce6fdc1659c5fbc0f4224fd6ad29
