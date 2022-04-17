@@ -22,6 +22,11 @@ set incsearch
 " if the file is edited, reload it
 set autoread
 
+" auto-format all files on save with trailx to remove trailing spaces
+autocmd BufWritePost * silent! !trailx <afile>
+autocmd BufWritePost * redraw!
+
+
 " auto-format go files on save with goimports
 autocmd BufWritePost *.go silent! !goimports -w <afile>
 autocmd BufWritePost *.go redraw!
@@ -88,6 +93,9 @@ nnoremap <C-p> :find ./**/*
 " for terraform / hcl files
 au BufRead,BufNewFile *.tf set filetype=hcl
 au BufRead,BufNewFile *.hcl set filetype=hcl
+
+" for zig files
+au BufRead,BufNewFile *.zig set filetype=zig
 
 " set ctags file name
 set tags=./tags,./tags.o,./tags.dot;
