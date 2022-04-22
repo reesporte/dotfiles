@@ -23,20 +23,23 @@ alias python='python3.10'
 alias python3='python3.10'
 alias pip='pip3.10'
 alias pip3='pip3.10'
-# execute lisp 
+# execute lisp
 alias elisp='sbcl --script $1'
 # ls
 alias la='ls -alh'
 alias l='ls'
-# vim 
+# vim
 alias v='vim'
-# clear 
+# clear
 alias cls='clear'
 # ripgrep no ignore
 alias g='rg --no-ignore $1'
 
+# rebuild ctags
+alias rc='ctags -R -f tags.dot'
 
-# secrets 
+
+# secrets
 [ -f ~/.secret_zsh_aliases ] && source ~/.secret_zsh_aliases
 
 # ------------------------------
