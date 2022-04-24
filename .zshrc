@@ -38,6 +38,8 @@ alias g='rg --no-ignore $1'
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
 
+# be like shakespeare
+alias exeunt=exit
 
 # secrets
 [ -f ~/.secret_zsh_aliases ] && source ~/.secret_zsh_aliases
