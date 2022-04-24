@@ -10,7 +10,7 @@ set number
 " minimize number spacing
 set numberwidth=1
 
-" set line number colors 
+" set line number colors
 highlight LineNr ctermfg=White
 
 " always show the status bar at the bottom
@@ -22,9 +22,10 @@ set incsearch
 " if the file is edited, reload it
 set autoread
 
+" TODO: fix trailx so it doesnt change file mode lol
 " auto-format all files on save with trailx to remove trailing spaces
-autocmd BufWritePost * silent! !trailx <afile>
-autocmd BufWritePost * redraw!
+" autocmd BufWritePost * silent! !trailx <afile>
+" autocmd BufWritePost * redraw!
 
 
 " auto-format go files on save with goimports
@@ -89,7 +90,7 @@ nnoremap <C-p> :find ./**/*
 "    autocmd QuickFixCmdPost [^l]* cwindow
 "augroup END
 
-" custom syntax files 
+" custom syntax files
 " for terraform / hcl files
 au BufRead,BufNewFile *.tf set filetype=hcl
 au BufRead,BufNewFile *.hcl set filetype=hcl
@@ -100,7 +101,7 @@ au BufRead,BufNewFile *.zig set filetype=zig
 " set ctags file name
 set tags=./tags,./tags.o,./tags.dot;
 
-" set regex engine to use NFA 
+" set regex engine to use NFA
 set re=2
 
 " make file-browsing more enjoyable
