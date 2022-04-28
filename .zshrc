@@ -41,6 +41,9 @@ alias rc='ctags -R -f tags.dot'
 # be like shakespeare
 alias exeunt=exit
 
+# define a word with Wiktionary's help
+define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -t | less }
+
 # secrets
 [ -f ~/.secret_zsh_aliases ] && source ~/.secret_zsh_aliases
 
