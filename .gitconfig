@@ -12,6 +12,7 @@
 	brancg = branch
 	dif = diff
 	cehckout = checkout
+    chekcout = checkout
 [pull]
 	rebase = true
 [init]
