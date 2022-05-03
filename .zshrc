@@ -38,6 +38,9 @@ alias g='rg --no-ignore $1'
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
 
+# setup tmux with vim
+alias ide="tmux new-session \;  send-keys 'vim .' C-m \; split-window -h \;"
+
 # be like shakespeare
 alias exeunt=exit
 
