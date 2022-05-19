@@ -10,6 +10,7 @@
 	puhs = push
 	puh = push
 	stauts = status
+	stats = status
 	brancg = branch
 	dif = diff
 	cehckout = checkout
