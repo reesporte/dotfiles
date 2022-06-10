@@ -108,8 +108,6 @@ set re=2
 let g:netrw_banner=0 " no banner
 let g:netrw_liststyle=3 " tree view
 
-" wrap text at 84 chars
-set textwidth=84
 
 " turn off that dagnab bell
 set noeb vb t_vb=
