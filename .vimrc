@@ -32,9 +32,9 @@ set autoread
 autocmd BufWritePost *.go silent! !goimports -w <afile>
 autocmd BufWritePost *.go redraw!
 
-" auto-format c files on save with clang-format
-autocmd BufWritePost *.c,*.cpp silent! !clang-format -i <afile>
-autocmd BufWritePost *.c,*.cpp redraw!
+" auto-format c, c++, and java files on save with clang-format
+autocmd BufWritePost *.c,*.cpp,*.java silent! !clang-format -i <afile>
+autocmd BufWritePost *.c,*.cpp,*.java redraw!
 
 " auto-format python files on save with black
 autocmd BufWritePost *.py silent! !black <afile>
@@ -107,7 +107,5 @@ set re=2
 " make file-browsing more enjoyable
 let g:netrw_banner=0 " no banner
 let g:netrw_liststyle=3 " tree view
-
-
 " turn off that dagnab bell
 set noeb vb t_vb=
