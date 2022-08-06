@@ -34,6 +34,7 @@ alias v='vim'
 alias cls='clear'
 # ripgrep no ignore
 alias g='rg --no-ignore $1'
+alias k='rg $1'
 
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
