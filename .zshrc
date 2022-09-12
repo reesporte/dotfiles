@@ -12,6 +12,7 @@ complete -o nospace -C $HOME/homebrew/bin/terraform terraform
 
 # turn off damn beeps
 unsetopt BEEP
+
 # ------------------------------
 # ALIASES
 # ------------------------------
