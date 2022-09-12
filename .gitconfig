@@ -7,13 +7,19 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [alias]
+    ocmmit = commit
+    cm = commit
 	puhs = push
 	puh = push
+    ps = push
+    pul = pull
+    pl = pull
 	stauts = status
 	stats = status
 	brancg = branch
 	dif = diff
 	cehckout = checkout
+	co = checkout
 	cecout = checkout
 	checout = checkout
     chekcout = checkout
