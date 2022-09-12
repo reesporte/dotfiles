@@ -1,10 +1,6 @@
-[user]
-	name = reesporte
-	email = reesedporter@gmail.com
-
+[include]
+    path = ~/.secret_git_config
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[url "git@github.com:"]
 	insteadOf = https://github.com/
 [alias]
     ocmmit = commit
