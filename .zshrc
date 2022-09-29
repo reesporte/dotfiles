@@ -46,6 +46,8 @@ alias ide="tmux new-session \;  send-keys 'vim .' C-m \; split-window -h \;"
 # be like shakespeare
 alias exeunt=exit
 
+alias kys=exit
+
 # define a word with Wiktionary's help
 define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -t | less }
 
