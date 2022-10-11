@@ -43,6 +43,11 @@ alias rc='ctags -R -f tags.dot'
 # setup tmux with vim
 alias ide="tmux new-session \;  send-keys 'vim .' C-m \; split-window -h \;"
 
+# find and replace
+function far() {
+    gsed -i "s/$1/$2/g" $@[3,-1]
+}
+
 # be like shakespeare
 alias exeunt=exit
 
