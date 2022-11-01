@@ -34,8 +34,8 @@ alias v='vim'
 # clear
 alias cls='clear'
 # ripgrep no ignore
-alias g='rg --no-ignore $1'
-alias k='rg $1'
+alias g='rg --no-ignore $@'
+alias k='rg $@'
 
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
@@ -44,14 +44,23 @@ alias rc='ctags -R -f tags.dot'
 alias ide="tmux new-session \;  send-keys 'vim .' C-m \; split-window -h \;"
 
 # find and replace
+# usage:
+# far <old pattern> <new pattern> <files to modify>
 function far() {
     gsed -i "s/$1/$2/g" $@[3,-1]
 }
 
+# directory find and replace
+# usage:
+# dfar <old pattern> <new pattern> <directory to recurse>
+function dfar() {
+    rg -l $1 $3 | xargs gsed -i "s/$1/$2/g"
+}
+
 # be like shakespeare
 alias exeunt=exit
-
 alias kys=exit
+alias die=exit
 
 # define a word with Wiktionary's help
 define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -t | less }
