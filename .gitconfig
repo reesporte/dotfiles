@@ -12,6 +12,9 @@
     pl = pull
 	stauts = status
 	stats = status
+    sts = status
+    st = status
+    br = branch
 	brancg = branch
 	dif = diff
 	cehckout = checkout
