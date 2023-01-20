@@ -17,7 +17,10 @@ unsetopt BEEP
 # ALIASES
 # ------------------------------
 # get battery life
-alias b='pmset -g batt | grep % | cut -d" " -f3 | cut -f2'
+case "$(uname -s)" in
+    Darwin*) alias b='pmset -g batt | grep % | cut -d" " -f3 | cut -f2';;
+    *) alias b="idk%";;
+esac
 # use python3.10 by default
 alias py='python3.10'
 alias python='python3.10'
