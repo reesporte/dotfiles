@@ -80,7 +80,7 @@ export PATH=$HOME/.cargo/bin:$HOME/homebrew/opt/postgresql/bin:$HOME/homebrew/op
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 # actual prompt customization
-export PROMPT='%F{35}$(b)%# %F{33}%~%f ➾ '
+export PROMPT='%F{75}$(b)%# %F{75}%~%f ➾ '
 # enable colors
 export CLICOLOR=1
 # make ls look pretty
