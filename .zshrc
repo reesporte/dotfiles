@@ -58,7 +58,7 @@ function far() {
 # usage:
 # dfar <old pattern> <new pattern> <directory to recurse>
 function dfar() {
-    rg -l $1 $3 | xargs gsed -i "s/$1/$2/g"
+    rg -l $1 $3 | xargs gsed -i "s|$1|$2|g"
 }
 
 # be like shakespeare
