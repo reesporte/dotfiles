@@ -6,6 +6,11 @@ autoload -Uz compinit && compinit
 # enable prompt parameter expansions
 setopt PROMPT_SUBST
 
+# history searching
+setopt sharehistory # share across terminals
+setopt incappendhistory # append after each command
+bindkey -e
+
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/homebrew/bin/terraform terraform
@@ -87,3 +92,4 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
+
