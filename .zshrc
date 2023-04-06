@@ -66,6 +66,11 @@ function dfar() {
     rg -l $1 $3 | xargs gsed -i "s|$1|$2|g"
 }
 
+# recursively list all golang files in current directory
+function rlg() {
+    find . -type f -name "*.go"
+}
+
 # be like shakespeare
 alias exeunt=exit
 alias kys=exit
