@@ -76,6 +76,8 @@ alias exeunt=exit
 alias kys=exit
 alias die=exit
 
+alias bruh="echo bruh"
+
 # define a word with Wiktionary's help
 define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -t | less }
 
