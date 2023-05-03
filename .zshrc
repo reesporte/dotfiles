@@ -27,11 +27,9 @@ case "$(uname -s)" in
     *) alias b="echo ''";;
 esac
 # use python3.10 by default
-alias py='python3.10'
-alias python='python3.10'
-alias python3='python3.10'
-alias pip='pip3.10'
-alias pip3='pip3.10'
+alias py='python3'
+alias python='python3'
+alias pip='python3 -m pip'
 # execute lisp
 alias elisp='sbcl --script $1'
 # ls
