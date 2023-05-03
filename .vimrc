@@ -40,13 +40,9 @@ autocmd BufWritePost *.c,*.cpp,*.java redraw!
 autocmd BufWritePost *.py silent! !black <afile>
 autocmd BufWritePost *.py redraw!
 
-" auto-format html files on save with html-compile
-autocmd BufWritePost *.html silent! !html-compile --prettify <afile> --out .
-autocmd BufWritePost *.html redraw!
-
-" auto-format css files on save with prettier
-autocmd BufWritePost *.css silent! !prettier -w <afile>
-autocmd BufWritePost *.css redraw!
+" auto-format html, css files on save with prettier
+autocmd BufWritePost *.html,*.css silent! !prettier -w <afile>
+autocmd BufWritePost *.html,*.css redraw!
 
 " auto-format terraform files on save with terraform fmt
 autocmd BufWritePost *.tf silent! !terraform fmt <afile>
