@@ -89,8 +89,12 @@ define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -
 export PATH=$HOME/.cargo/bin:$HOME/homebrew/opt/postgresql/bin:$HOME/homebrew/opt/openjdk/bin:$HOME/homebrew/opt/libpq/bin:$HOME/homebrew/bin:$HOME/go/bin:$HOME/bin:$PATH
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
-# actual prompt customization
-export PROMPT='%F{75}$(b)%# %F{75}%~%f ➾ '
+
+case "$(uname -s)" in
+    Darwin*) export PROMPT='%F{75}$(pmset -g batt | grep % | cut -d" " -f3 | cut -f2)%# %F{75}%~%f ➾ ';;
+    *) export PROMPT='%F{75}# %F{75}%~%f ➾ ';;
+esac
+
 # enable colors
 export CLICOLOR=1
 # make ls look pretty
@@ -98,3 +102,5 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
 
+# source fzf keybindings
+[ -f ~/homebrew/opt/fzf/shell/key-bindings.zsh ] && source ~/homebrew/opt/fzf/shell/key-bindings.zsh
