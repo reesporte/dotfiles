@@ -22,6 +22,9 @@ set incsearch
 " if the file is edited, reload it
 set autoread
 
+" automatically continue the indent
+set autoindent
+
 " TODO: fix trailx so it doesnt change file mode lol
 " auto-format all files on save with trailx to remove trailing spaces
 " autocmd BufWritePost * silent! !trailx <afile>
