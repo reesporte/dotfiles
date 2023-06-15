@@ -32,7 +32,7 @@ set autoindent
 
 
 " auto-format go files on save with goimports
-autocmd BufWritePost *.go silent! !gofumpt -w <afile>
+autocmd BufWritePost *.go silent! !goimports -w <afile> && gofumpt -w <afile>
 autocmd BufWritePost *.go redraw!
 
 " auto-format c, c++, and java files on save with clang-format
