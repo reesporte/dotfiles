@@ -119,9 +119,9 @@ export PROMPT='⇥ '
 # enable colors
 export CLICOLOR=1
 
-# make ls look pretty
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export LS_COLORS='di=1;36:ln=1;35:so=1;32:pi=1;33:ex=1;31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=34;43'
+# make ls look boring
+export LSCOLORS=XXxxxxxxxxxxxxxxxxXXXX
+export LS_COLORS='di=1;0;1:ln=0:so=0:pi=0:ex=0:bd=0:cd=0:su=0:sg=0:tw=1;0;1:ow=1;0;1'
 
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
