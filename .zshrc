@@ -1,10 +1,6 @@
-# ------------------------------
-# ZSH OPTIONS
-# ------------------------------
+## SET OPTIONS
 # enable tab completion
 autoload -Uz compinit && compinit
-# enable prompt parameter expansions
-setopt PROMPT_SUBST
 
 # history searching
 setopt sharehistory # share across terminals
@@ -18,15 +14,13 @@ complete -o nospace -C $HOME/homebrew/bin/terraform terraform
 # turn off damn beeps
 unsetopt BEEP
 
-# ------------------------------
-# ALIASES
-# ------------------------------
+## ALIASES AND FUNCTIONS
 # get battery life
 case "$(uname -s)" in
     Darwin*) alias b='pmset -g batt | grep % | cut -d" " -f3 | cut -f2';;
-    *) alias b="echo ''";;
 esac
-# use python3.10 by default
+
+# python aliases
 alias py='python3'
 alias python='python3'
 alias pip='python3 -m pip'
@@ -47,9 +41,6 @@ alias k='rg $@'
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
 
-# setup tmux with vim
-alias ide="tmux new-session \;  send-keys 'vim .' C-m \; split-window -h \;"
-
 # find and replace
 # usage:
 # far <old pattern> <new pattern> <files to modify>
@@ -69,10 +60,10 @@ function rlg() {
     find . -type f -name "*.go"
 }
 
-# be like shakespeare
 alias exeunt=exit
 alias kys=exit
 alias die=exit
+
 __mike='
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -110,34 +101,31 @@ __mike='
 ⣿⣿⣿⣿⣿⣿⣿⠛⢋⣴⣿⡿⠟⡀⢸⣿⠿⣫⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⡇⠀⣿⣿⣿⣄⠿⠿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣾⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣝⣿⣇⣤⣬⣝⣻⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿
 '
-
 alias bruh='echo $__mike'
-# define a word with Wiktionary's help
-define() { curl -s https://en.wiktionary.org/wiki/$1 | htmlq .mw-parser-output -t | less }
 
 # secrets
 [ -f ~/.secret_zsh_aliases ] && source ~/.secret_zsh_aliases
 
-# ------------------------------
-# EXPORTS
-# ------------------------------
+## EXPORTS
 # add a bunch of stuff to the path
 export PATH=$HOME/.cargo/bin:$HOME/homebrew/opt/postgresql/bin:$HOME/homebrew/opt/openjdk/bin:$HOME/homebrew/opt/libpq/bin:$HOME/homebrew/bin:$HOME/go/bin:$HOME/bin:$PATH
+
 # tell homebrew not to update itself every fucking second
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-case "$(uname -s)" in
-    Darwin*) export PROMPT='%F{75}$(pmset -g batt | grep % | cut -d" " -f3 | cut -f2)%# %F{75}%~%f ➾ ';;
-    *) export PROMPT='%F{75}# %F{75}%~%f ➾ ';;
-esac
+# make the prompt really simple and dumb
+export PROMPT='⇥ '
 
 # enable colors
 export CLICOLOR=1
+
 # make ls look pretty
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export LS_COLORS='di=1;36:ln=1;35:so=1;32:pi=1;33:ex=1;31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=34;43'
+
 # set my notes directory for the notes cli
 export NOTES_HOME=~/notes
 
+## EXTRA SOURCES
 # source fzf keybindings
 [ -f ~/homebrew/opt/fzf/shell/key-bindings.zsh ] && source ~/homebrew/opt/fzf/shell/key-bindings.zsh
