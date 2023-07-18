@@ -1,10 +1,10 @@
 highlight clear
 syntax on
 
-let g:colors_name="light"
-let colors_name="light"
+let g:colors_name="dark"
+let colors_name="dark"
 
-let s:black       = { "gui": "#000000", "cterm": "0" }
+let s:black       = { "gui": "#303030", "cterm": "236" }
 let s:grey        = { "gui": "#c0c0c0", "cterm": "7" }
 let s:white       = { "gui": "#ffffff", "cterm": "15" }
 
