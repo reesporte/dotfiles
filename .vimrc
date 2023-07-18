@@ -2,7 +2,7 @@
 syntax enable
 
 " set the colorscheme
-colorscheme highlights
+colorscheme dark
 
 " turn on line numbers
 set number
