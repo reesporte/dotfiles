@@ -7,6 +7,23 @@ setopt sharehistory # share across terminals
 setopt incappendhistory # append after each command
 bindkey -e
 
+# making history bigger: https://unix.stackexchange.com/questions/273861/unlimited-history-in-zsh
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt bang_hist                 # treat the '!' character specially during expansion.
+setopt extended_history          # write the history file in the ":start:elapsed;command" format.
+setopt inc_append_history        # write to the history file immediately, not when the shell exits.
+setopt share_history             # share history between all sessions.
+setopt hist_expire_dups_first    # expire duplicate entries first when trimming history.
+setopt hist_ignore_dups          # don't record an entry that was just recorded again.
+setopt hist_ignore_all_dups      # delete old recorded entry if new entry is a duplicate.
+setopt hist_find_no_dups         # do not display a line previously found.
+setopt hist_ignore_space         # don't record an entry starting with a space.
+setopt hist_save_no_dups         # don't write duplicate entries in the history file.
+setopt hist_reduce_blanks        # remove superfluous blanks before recording entry.
+setopt hist_verify               # don't execute immediately upon history expansion.
+
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/homebrew/bin/terraform terraform
