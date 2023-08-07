@@ -63,6 +63,11 @@ autocmd BufWritePost *.ts,*.tsx,*.js redraw!
 autocmd BufWritePost *.zig silent! !zig fmt <afile>
 autocmd BufWritePost *.zig redraw!
 
+" auto-format proto files on save with buf format
+autocmd BufWritePost *.proto silent! !buf format -w <afile>
+autocmd BufWritePost *.proto redraw!
+
+
 " don't make mistakes lol jk i just hate those undofiles
 set noundofile
 

@@ -53,7 +53,7 @@ alias cls='clear'
 alias c='clear'
 # ripgrep no ignore
 alias g='rg --no-ignore $@'
-alias k='rg $@'
+alias k="rg $@ -g '!tags.dot' -g '!vendor'"
 
 # rebuild ctags
 alias rc='ctags -R -f tags.dot'
