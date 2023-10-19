@@ -131,7 +131,7 @@ export PATH=$HOME/.cargo/bin:$HOME/homebrew/opt/postgresql/bin:$HOME/homebrew/op
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # make the prompt really simple and dumb
-export PROMPT='⇥ '
+export PROMPT='%~ ⇥ '
 
 # enable colors
 export CLICOLOR=1
