@@ -116,3 +116,7 @@ set noeb vb t_vb=
 
 " allow filetype plugins
 filetype plugin on
+
+" fix neovim ugly cursor
+set guicursor=n-v-c-i:block
+
