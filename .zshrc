@@ -47,7 +47,7 @@ alias elisp='sbcl --script $1'
 alias la='ls -alh'
 alias l='ls'
 # vim
-alias v='vim'
+alias v='nvim'
 # clear
 alias cls='clear'
 alias c='clear'

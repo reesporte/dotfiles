@@ -113,3 +113,6 @@ let g:netrw_banner=0 " no banner
 let g:netrw_liststyle=3 " tree view
 " turn off that dagnab bell
 set noeb vb t_vb=
+
+" allow filetype plugins
+filetype plugin on
