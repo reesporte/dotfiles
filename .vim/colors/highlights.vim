@@ -220,9 +220,9 @@ endif
 """ NON-FT-SPECIFIC SYNTAX {{{
 " Base groups: only these groups + Normal will form the foundation of syntax highlighting
 highlight! link  Comment  TextLightGray
-highlight! link  String   TextGreen
+highlight! link  String   Normal
 highlight! link  Special  TextCyan
-highlight! link  Todo     TextYellow
+highlight! link  Todo     TextLightGray
 
 " Linked groups:
 highlight! link  Boolean       Normal
@@ -399,7 +399,7 @@ highlight! link  markdownHeadingDelimiter  TextBlue
 
 " Vim
 " Highlighting conventional comment titles (e.g. Author, etc) is useful
-highlight! link  vimCommentTitle    TextYellow
+highlight! link  vimCommentTitle    TextLightGray
 highlight! link  vimAddress         Normal
 highlight! link  vimAutoEvent       Normal
 highlight! link  vimBracket         Normal
