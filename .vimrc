@@ -120,3 +120,11 @@ filetype plugin on
 " fix neovim ugly cursor
 set guicursor=n-v-c-i:block
 
+" split a terminal in a new window
+command T split | term
+
+" neovim mouse scrolling sucks
+set mouse=
+
+" neovim opens shit with folds for no good reason
+set nofoldenable
