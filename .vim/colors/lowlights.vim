@@ -1,4 +1,3 @@
-" Author: Ian Emnace <igemnace@gmail.com>
 " Palette:
 " black      236  #303030
 " red        210  #ff8787
@@ -16,7 +15,7 @@ highlight clear
 if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name = 'highlights'
+let g:colors_name = 'lowlights'
 """ END COLORSCHEME BOILERPLATE }}}
 
 """ ENVIRONMENT-DEPENDENT HIGHLIGHTS {{{
