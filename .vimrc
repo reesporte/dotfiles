@@ -117,14 +117,36 @@ set noeb vb t_vb=
 " allow filetype plugins
 filetype plugin on
 
-" fix neovim ugly cursor
-set guicursor=n-v-c-i:block
+if has ('nvim')
+    " fix neovim ugly cursor
+    set guicursor=n-v-c-i:block
 
-" split a terminal in a new window
-command T split | term
+    " neovim thinks terminals should start in normal mode, this is dumb. make
+    " it start in insert mode.
+    autocmd TermOpen * startinsert!
 
-" neovim mouse scrolling sucks
-set mouse=
+    " neovim has numbers on in terminals all the time. this is dumb, make it
+    " so that numbers are only on in normal mode.
+    autocmd TermEnter * setlocal nonu
+    autocmd TermLeave * setlocal nu
 
-" neovim opens shit with folds for no good reason
-set nofoldenable
+    " neovim leaves the terminal open when the process exits. this is dumb,
+    " make it close immediately.
+    autocmd TermClose * close
+
+    " make ter start a terminal in a split
+    cabbrev ter sp<bar>term
+
+    " make esc put you back in normal mode, when you're in terminal mode
+    tmap <Esc> <C-\><C-N>
+
+    " neovim mouse scrolling sucks
+    set mouse=
+
+    " neovim opens shit with folds for no good reason
+    set nofoldenable
+
+    " neovim thinks it's fun to show you what your command is going to do
+    " before you do it. this turns that off.
+    let &inccommand = ""
+endif
