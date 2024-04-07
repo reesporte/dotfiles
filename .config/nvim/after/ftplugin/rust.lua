@@ -3,7 +3,7 @@ if vim.fn.executable('rust-analyzer') == 1 then
     vim.lsp.start({
         name = 'rust-analyzer server',
         cmd = { 'rust-analyzer' },
-        root_patterns = { 'Cargo.toml' },
+        root_dir = vim.fs.dirname(vim.fs.find({'Cargo.toml'}, { upward = true })[1])
         settings = {
             ['rust-analyzer'] = {
               imports = {
