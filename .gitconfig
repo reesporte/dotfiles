@@ -6,6 +6,7 @@
     ocmmit = commit
     cm = commit
 	puhs = push
+	psuh = push
 	puh = push
     ps = push
     pul = pull
